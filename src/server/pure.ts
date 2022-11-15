@@ -33,7 +33,7 @@ function createServerRenderer<TProps, TResult>(
       } else {
         container = document.createElement('div')
         act(() => {
-          ReactDOM.hydrate(testHarness(renderProps), container!)
+          ReactDOM.hydrate(testHarness(renderProps), container || null)
         })
       }
     },
